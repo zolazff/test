@@ -1,1 +1,43 @@
+print("-------------缺失值比例----------")
+print((cdma1909.count()/cdma1909.shape[0]).sort_values())
+print("\n")
+​print("-------------缺失值比例----------")
+print((cdma1909.count()/cdma1909.shape[0]).sort_values())
+print("\n")
 
+print("--------标识字段描述-唯一值--------")
+print(cdma1909[cols_ID].describe().T)
+print("\n")
+
+print("-------时间戳字段描述-------")
+print(cdma1909[cols_time].describe().T)
+print("\n")
+
+print("-------分类字段描述-------")
+for i in cols_cate:
+    print(i)
+    print(cdma1909[i].value_counts()/cdma1909.shape[0])
+    print("\n")
+print("\n")
+
+print("-------连续型字段描述-分位数------")
+print(cdma1909[cols_conti].describe().T)
+print("\n")
+print("--------标识字段描述-唯一值--------")
+print(cdma1909[cols_ID].describe().T)
+print("\n")
+
+print("-------时间戳字段描述-------")
+print(cdma1909[cols_time].describe().T)
+print("\n")
+
+print("-------分类字段描述-------")
+for i in cols_cate:
+    print(i)
+    print(cdma1909[i].value_counts()/cdma1909.shape[0])
+    print("\n")
+print("\n")
+
+print("-------连续型字段描述-分位数------")
+print(cdma1909[cols_conti].describe().T)
+print("\n")
